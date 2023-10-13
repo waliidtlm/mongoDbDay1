@@ -29,12 +29,20 @@
     </style>
 
     <h1>Product List</h1>
+    <form action="/advanced-search" method="get">
+        <input type="search" name="name"   placeholder=" Search for..."  >
+       
+    </form>
+    <h1>Advanced Search</h1>
+    
+    
      <% products.forEach(function(product) { %>
          <div class="product-card">
              <h2><%= product.name %></h2>
              <p>Price : <%= product.price %> $</p>
         <p>Description: <%= product.description %></p>
         <img src="<%=product.image%>" height="100px" > </img>
+
          </div>
     <% }); %>
 
